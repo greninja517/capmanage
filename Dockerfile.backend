@@ -1,8 +1,17 @@
-FROM node:20-alpine AS base
+FROM node:20-alpine
+
 WORKDIR /usr/src/app
+
+# Install dependencies
 COPY backend/package*.json ./
 RUN npm install
+
+# Copy source
 COPY backend/ ./
+
+# Build backend
 RUN npm run build
+
 EXPOSE 5000
+
 CMD ["npm", "run", "start"]
