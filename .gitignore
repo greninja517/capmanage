@@ -13,10 +13,8 @@ pnpm-lock.yaml
 .DS_Store
 .vscode/
 # Env files — DO NOT commit real secrets
-.env
 .env.local
 .env.*.local
-.env.* 
 # Logs, coverage, temp
 coverage/
 logs/
